@@ -415,8 +415,10 @@ var moveBoxRight= function(n, easing, duration)
   else{
     if(n >= 5) return;
     // add css transition code here;
+    $(id).css({"transition-timing-function":easing});
+    $(id).css({"trasnition-duration": duration + "ms"});  
     $(id).css({"margin-left":pageWidth-boxWidth + "px"});
-    $(id).css({"background-color":ec})
+    $(id).css({"background-color":ec});
     console.log("Write this code");
   }
 }
@@ -435,8 +437,10 @@ var moveBoxLeft= function(n, easing, duration)
   else{
     if(n >= 5) return;
     // add css transition code here;
-    $(id).css({"margin-right":pageWidth-boxWidth + "px"});
-    $(id).css({"background-color":ec})
+    $(id).css({"transition-timing-function":easing});
+    $(id).css({"transition-duration": duration + "ms"});
+    $(id).css({"margin-left":"0px"});
+    $(id).css({"background-color":ec});
     console.log("Write this code");
   }
 }
